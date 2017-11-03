@@ -1,4 +1,8 @@
-﻿Public Class Form1
+﻿''----------------------------------------------------''
+'' This container deals with Message Box Dialogs
+''----------------------------------------------------''
+
+Public Class Form1
     Private Sub BtnShowMessage_Click(sender As Object, e As EventArgs) Handles btnShowMessage.Click
         If MessageBox.Show("Hiya", "Yes or No", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) = DialogResult.Yes Then
             MessageBox.Show("You clicked Yes")
@@ -14,6 +18,10 @@
             MessageBox.Show("The program will not exit")
         End If
     End Sub
+
+    ''----------------------------------------------------''
+    '' This container deals with Open and Save Dialogs
+    ''----------------------------------------------------''
 
     Private Sub BtnFileToOpen_Click(sender As Object, e As EventArgs) Handles btnFileToOpen.Click, OpenToolStripMenuItem.Click
         ofdData.FileName = txtFileToOpen.Text

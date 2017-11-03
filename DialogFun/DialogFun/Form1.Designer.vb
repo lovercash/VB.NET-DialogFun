@@ -42,6 +42,7 @@ Partial Class Form1
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,7 +77,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnExit)
         Me.Panel1.Controls.Add(Me.btnShowMessage)
-        Me.Panel1.Location = New System.Drawing.Point(12, 12)
+        Me.Panel1.Location = New System.Drawing.Point(12, 79)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(426, 135)
         Me.Panel1.TabIndex = 2
@@ -105,7 +106,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.MenuStrip1)
-        Me.Panel2.Location = New System.Drawing.Point(12, 176)
+        Me.Panel2.Location = New System.Drawing.Point(12, 243)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(426, 170)
         Me.Panel2.TabIndex = 3
@@ -115,7 +116,7 @@ Partial Class Form1
         Me.btnSaveFile.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSaveFile.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaveFile.Location = New System.Drawing.Point(332, 101)
+        Me.btnSaveFile.Location = New System.Drawing.Point(339, 100)
         Me.btnSaveFile.Name = "btnSaveFile"
         Me.btnSaveFile.Size = New System.Drawing.Size(62, 23)
         Me.btnSaveFile.TabIndex = 9
@@ -126,7 +127,7 @@ Partial Class Form1
         '
         Me.txtSaveFile.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtSaveFile.Location = New System.Drawing.Point(103, 101)
+        Me.txtSaveFile.Location = New System.Drawing.Point(110, 100)
         Me.txtSaveFile.Name = "txtSaveFile"
         Me.txtSaveFile.Size = New System.Drawing.Size(221, 20)
         Me.txtSaveFile.TabIndex = 8
@@ -138,7 +139,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(9, 100)
+        Me.Label4.Location = New System.Drawing.Point(16, 99)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 18)
         Me.Label4.TabIndex = 7
@@ -149,7 +150,7 @@ Partial Class Form1
         Me.btnFileToOpen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnFileToOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFileToOpen.Location = New System.Drawing.Point(332, 72)
+        Me.btnFileToOpen.Location = New System.Drawing.Point(339, 71)
         Me.btnFileToOpen.Name = "btnFileToOpen"
         Me.btnFileToOpen.Size = New System.Drawing.Size(62, 23)
         Me.btnFileToOpen.TabIndex = 6
@@ -160,7 +161,7 @@ Partial Class Form1
         '
         Me.txtFileToOpen.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFileToOpen.Location = New System.Drawing.Point(103, 72)
+        Me.txtFileToOpen.Location = New System.Drawing.Point(110, 71)
         Me.txtFileToOpen.Name = "txtFileToOpen"
         Me.txtFileToOpen.Size = New System.Drawing.Size(221, 20)
         Me.txtFileToOpen.TabIndex = 5
@@ -172,7 +173,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(9, 71)
+        Me.Label3.Location = New System.Drawing.Point(16, 70)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(88, 18)
         Me.Label3.TabIndex = 4
@@ -232,11 +233,25 @@ Partial Class Form1
         Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
         '
+        'Label5
+        '
+        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(58, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(349, 24)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Playing around with different Dialogs"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(450, 818)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -250,6 +265,7 @@ Partial Class Form1
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -272,4 +288,5 @@ Partial Class Form1
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OpenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SaveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label5 As Label
 End Class
