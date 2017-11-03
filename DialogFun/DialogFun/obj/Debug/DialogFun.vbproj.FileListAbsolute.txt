@@ -1,0 +1,11 @@
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\bin\Debug\DialogFun.exe.config
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\bin\Debug\DialogFun.exe
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\bin\Debug\DialogFun.pdb
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\bin\Debug\DialogFun.xml
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.vbprojResolveAssemblyReference.cache
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.Form1.resources
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.Resources.resources
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.vbproj.GenerateResource.Cache
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.exe
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.xml
+K:\Development\GitHubDesktop\Repos\VB.NET-DialogFun\DialogFun\DialogFun\obj\Debug\DialogFun.pdb
