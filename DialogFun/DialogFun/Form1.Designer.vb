@@ -35,26 +35,34 @@ Partial Class Form1
         Me.txtFileToOpen = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ofdData = New System.Windows.Forms.OpenFileDialog()
-        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.sfdData = New System.Windows.Forms.SaveFileDialog()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ofdData = New System.Windows.Forms.OpenFileDialog()
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.sfdData = New System.Windows.Forms.SaveFileDialog()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pColorFontDialog = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnSetColor = New System.Windows.Forms.Button()
+        Me.txtSampleText = New System.Windows.Forms.TextBox()
         Me.btnSetFont = New System.Windows.Forms.Button()
+        Me.btnSetColor = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.ColorSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cdSetColor = New System.Windows.Forms.ColorDialog()
         Me.fdSetFont = New System.Windows.Forms.FontDialog()
-        Me.txtSampleText = New System.Windows.Forms.TextBox()
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
+        Me.ButtonColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cdButtonColor = New System.Windows.Forms.ColorDialog()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pColorFontDialog.SuspendLayout()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnShowMessage
@@ -116,7 +124,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.MenuStrip1)
         Me.Panel2.Location = New System.Drawing.Point(12, 243)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(426, 170)
+        Me.Panel2.Size = New System.Drawing.Size(424, 170)
         Me.Panel2.TabIndex = 3
         '
         'btnSaveFile
@@ -126,7 +134,7 @@ Partial Class Form1
         Me.btnSaveFile.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveFile.Location = New System.Drawing.Point(339, 100)
         Me.btnSaveFile.Name = "btnSaveFile"
-        Me.btnSaveFile.Size = New System.Drawing.Size(62, 23)
+        Me.btnSaveFile.Size = New System.Drawing.Size(60, 23)
         Me.btnSaveFile.TabIndex = 9
         Me.btnSaveFile.Text = "&Save"
         Me.btnSaveFile.UseVisualStyleBackColor = True
@@ -137,7 +145,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtSaveFile.Location = New System.Drawing.Point(110, 100)
         Me.txtSaveFile.Name = "txtSaveFile"
-        Me.txtSaveFile.Size = New System.Drawing.Size(221, 20)
+        Me.txtSaveFile.Size = New System.Drawing.Size(219, 20)
         Me.txtSaveFile.TabIndex = 8
         Me.txtSaveFile.Text = "SaveMe.txt"
         '
@@ -160,7 +168,7 @@ Partial Class Form1
         Me.btnFileToOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnFileToOpen.Location = New System.Drawing.Point(339, 71)
         Me.btnFileToOpen.Name = "btnFileToOpen"
-        Me.btnFileToOpen.Size = New System.Drawing.Size(62, 23)
+        Me.btnFileToOpen.Size = New System.Drawing.Size(60, 23)
         Me.btnFileToOpen.TabIndex = 6
         Me.btnFileToOpen.Text = "&Open"
         Me.btnFileToOpen.UseVisualStyleBackColor = True
@@ -171,7 +179,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtFileToOpen.Location = New System.Drawing.Point(110, 71)
         Me.txtFileToOpen.Name = "txtFileToOpen"
-        Me.txtFileToOpen.Size = New System.Drawing.Size(221, 20)
+        Me.txtFileToOpen.Size = New System.Drawing.Size(219, 20)
         Me.txtFileToOpen.TabIndex = 5
         Me.txtFileToOpen.Text = "OpenMe.txt"
         '
@@ -200,25 +208,12 @@ Partial Class Form1
         Me.Label2.Text = "Dialog File Control Example"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'ofdData
-        '
-        Me.ofdData.FileName = "OpenFileDialog1"
-        Me.ofdData.Filter = "Text Files | *.txt| Word Files | *.doc | Word Files | *.docx |  All Files |*.*"
-        '
-        'ErrorProvider1
-        '
-        Me.ErrorProvider1.ContainerControl = Me
-        '
-        'sfdData
-        '
-        Me.sfdData.Filter = "Text Files | *.txt| Word Files | *.doc | Word Files | *.docx |  All Files |*.*"
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(424, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(422, 24)
         Me.MenuStrip1.TabIndex = 10
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -232,14 +227,27 @@ Partial Class Form1
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.OpenToolStripMenuItem.Text = "&Open"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
         Me.SaveToolStripMenuItem.Text = "&Save"
+        '
+        'ofdData
+        '
+        Me.ofdData.FileName = "OpenFileDialog1"
+        Me.ofdData.Filter = "Text Files | *.txt| Word Files | *.doc | Word Files | *.docx |  All Files |*.*"
+        '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
+        'sfdData
+        '
+        Me.sfdData.Filter = "Text Files | *.txt| Word Files | *.doc | Word Files | *.docx |  All Files |*.*"
         '
         'Label5
         '
@@ -260,11 +268,42 @@ Partial Class Form1
         Me.pColorFontDialog.Controls.Add(Me.btnSetFont)
         Me.pColorFontDialog.Controls.Add(Me.btnSetColor)
         Me.pColorFontDialog.Controls.Add(Me.Label6)
+        Me.pColorFontDialog.Controls.Add(Me.MenuStrip2)
         Me.pColorFontDialog.Location = New System.Drawing.Point(13, 434)
         Me.pColorFontDialog.Name = "pColorFontDialog"
         Me.pColorFontDialog.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.pColorFontDialog.Size = New System.Drawing.Size(424, 201)
+        Me.pColorFontDialog.Size = New System.Drawing.Size(424, 312)
         Me.pColorFontDialog.TabIndex = 5
+        '
+        'txtSampleText
+        '
+        Me.txtSampleText.BackColor = System.Drawing.SystemColors.Control
+        Me.txtSampleText.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtSampleText.Location = New System.Drawing.Point(0, 144)
+        Me.txtSampleText.Multiline = True
+        Me.txtSampleText.Name = "txtSampleText"
+        Me.txtSampleText.Size = New System.Drawing.Size(418, 101)
+        Me.txtSampleText.TabIndex = 5
+        Me.txtSampleText.Text = "My Sample Text"
+        Me.txtSampleText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnSetFont
+        '
+        Me.btnSetFont.Location = New System.Drawing.Point(262, 95)
+        Me.btnSetFont.Name = "btnSetFont"
+        Me.btnSetFont.Size = New System.Drawing.Size(75, 23)
+        Me.btnSetFont.TabIndex = 3
+        Me.btnSetFont.Text = "Set Font"
+        Me.btnSetFont.UseVisualStyleBackColor = True
+        '
+        'btnSetColor
+        '
+        Me.btnSetColor.Location = New System.Drawing.Point(82, 95)
+        Me.btnSetColor.Name = "btnSetColor"
+        Me.btnSetColor.Size = New System.Drawing.Size(75, 23)
+        Me.btnSetColor.TabIndex = 2
+        Me.btnSetColor.Text = "Set Color"
+        Me.btnSetColor.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -272,48 +311,54 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(64, 12)
+        Me.Label6.Location = New System.Drawing.Point(61, 51)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(298, 24)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Color and Font Dialog Example"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'btnSetColor
+        'MenuStrip2
         '
-        Me.btnSetColor.Location = New System.Drawing.Point(85, 56)
-        Me.btnSetColor.Name = "btnSetColor"
-        Me.btnSetColor.Size = New System.Drawing.Size(75, 23)
-        Me.btnSetColor.TabIndex = 2
-        Me.btnSetColor.Text = "Set Color"
-        Me.btnSetColor.UseVisualStyleBackColor = True
+        Me.MenuStrip2.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColorSettingsToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(101, 24)
+        Me.MenuStrip2.TabIndex = 6
+        Me.MenuStrip2.Text = "MenuStrip2"
         '
-        'btnSetFont
+        'ColorSettingsToolStripMenuItem
         '
-        Me.btnSetFont.Location = New System.Drawing.Point(265, 56)
-        Me.btnSetFont.Name = "btnSetFont"
-        Me.btnSetFont.Size = New System.Drawing.Size(75, 23)
-        Me.btnSetFont.TabIndex = 3
-        Me.btnSetFont.Text = "Set Font"
-        Me.btnSetFont.UseVisualStyleBackColor = True
+        Me.ColorSettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForgroundColorToolStripMenuItem, Me.BackgroundColorToolStripMenuItem, Me.ButtonColorToolStripMenuItem})
+        Me.ColorSettingsToolStripMenuItem.Name = "ColorSettingsToolStripMenuItem"
+        Me.ColorSettingsToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.ColorSettingsToolStripMenuItem.Size = New System.Drawing.Size(93, 20)
+        Me.ColorSettingsToolStripMenuItem.Text = "Color Settings"
         '
-        'txtSampleText
+        'ForgroundColorToolStripMenuItem
         '
-        Me.txtSampleText.BackColor = System.Drawing.SystemColors.Control
-        Me.txtSampleText.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSampleText.Location = New System.Drawing.Point(3, 105)
-        Me.txtSampleText.Multiline = True
-        Me.txtSampleText.Name = "txtSampleText"
-        Me.txtSampleText.Size = New System.Drawing.Size(418, 93)
-        Me.txtSampleText.TabIndex = 5
-        Me.txtSampleText.Text = "My Sample Text"
-        Me.txtSampleText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ForgroundColorToolStripMenuItem.Name = "ForgroundColorToolStripMenuItem"
+        Me.ForgroundColorToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.ForgroundColorToolStripMenuItem.Text = "Forground Color"
+        '
+        'BackgroundColorToolStripMenuItem
+        '
+        Me.BackgroundColorToolStripMenuItem.Name = "BackgroundColorToolStripMenuItem"
+        Me.BackgroundColorToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.BackgroundColorToolStripMenuItem.Text = "Background Color"
+        '
+        'ButtonColorToolStripMenuItem
+        '
+        Me.ButtonColorToolStripMenuItem.Name = "ButtonColorToolStripMenuItem"
+        Me.ButtonColorToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.ButtonColorToolStripMenuItem.Text = "Button Color"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(450, 818)
+        Me.ClientSize = New System.Drawing.Size(448, 951)
         Me.Controls.Add(Me.pColorFontDialog)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)
@@ -325,11 +370,13 @@ Partial Class Form1
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pColorFontDialog.ResumeLayout(False)
         Me.pColorFontDialog.PerformLayout()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -362,4 +409,11 @@ Partial Class Form1
     Friend WithEvents cdSetColor As ColorDialog
     Friend WithEvents fdSetFont As FontDialog
     Friend WithEvents txtSampleText As TextBox
+    Friend WithEvents MenuStrip2 As MenuStrip
+    Friend WithEvents ColorSettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ForgroundColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackgroundColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PageSetupDialog1 As PageSetupDialog
+    Friend WithEvents ButtonColorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents cdButtonColor As ColorDialog
 End Class

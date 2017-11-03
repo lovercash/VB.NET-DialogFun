@@ -41,7 +41,7 @@ Public Class Form1
     '' This container deals with Color and Font Dialogs
     ''----------------------------------------------------''
 
-    Private Sub BtnSetColor_Click(sender As Object, e As EventArgs) Handles btnSetColor.Click
+    Private Sub BtnSetColor_Click(sender As Object, e As EventArgs) Handles btnSetColor.Click, BackgroundColorToolStripMenuItem.Click
         cdSetColor.Color = Me.BackColor
         If cdSetColor.ShowDialog() = DialogResult.OK Then
             pColorFontDialog.BackColor = cdSetColor.Color
@@ -52,6 +52,22 @@ Public Class Form1
     Private Sub BtnSetFont_Click(sender As Object, e As EventArgs) Handles btnSetFont.Click
         If fdSetFont.ShowDialog() = DialogResult.OK Then
             txtSampleText.Font = fdSetFont.Font
+        End If
+    End Sub
+
+    Private Sub ForgroundColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForgroundColorToolStripMenuItem.Click
+        cdSetColor.Color = Me.ForeColor
+        If cdSetColor.ShowDialog() = DialogResult.OK Then
+            pColorFontDialog.ForeColor = cdSetColor.Color
+            txtSampleText.ForeColor = cdSetColor.Color
+        End If
+    End Sub
+
+    Private Sub ButtonColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ButtonColorToolStripMenuItem.Click
+        If cdButtonColor.ShowDialog() = DialogResult.OK Then
+            btnSetColor.BackColor = cdButtonColor.Color
+            btnSetFont.BackColor = cdButtonColor.Color
+
         End If
     End Sub
 End Class
