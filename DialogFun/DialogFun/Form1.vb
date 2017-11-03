@@ -36,4 +36,27 @@ Public Class Form1
             txtSaveFile.Text = sfdData.FileName
         End If
     End Sub
+
+    ''----------------------------------------------------''
+    '' This container deals with Color and Font Dialogs
+    ''----------------------------------------------------''
+
+    Private Sub BtnSetColor_Click(sender As Object, e As EventArgs) Handles btnSetColor.Click
+        cdSetColor.Color = Me.BackColor
+        If cdSetColor.ShowDialog() = DialogResult.OK Then
+            pColorFontDialog.BackColor = cdSetColor.Color
+            txtSampleText.BackColor = cdSetColor.Color
+        End If
+    End Sub
+
+    Private Sub BtnSetFont_Click(sender As Object, e As EventArgs) Handles btnSetFont.Click
+
+
+        If cdSetFont.ShowDialog() = DialogResult.OK Then
+            txtSampleText.Font = cdSetFont.Font
+            Me.AutoSize = True
+
+
+        End If
+    End Sub
 End Class
