@@ -52,17 +52,24 @@ Partial Class Form1
         Me.ColorSettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BackgroundColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ButtonColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cdSetColor = New System.Windows.Forms.ColorDialog()
         Me.fdSetFont = New System.Windows.Forms.FontDialog()
         Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
-        Me.ButtonColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.cdButtonColor = New System.Windows.Forms.ColorDialog()
+        Me.fbdFolderOpen = New System.Windows.Forms.FolderBrowserDialog()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnFolderOpen = New System.Windows.Forms.Button()
+        Me.txtFolderOpen = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pColorFontDialog.SuspendLayout()
         Me.MenuStrip2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnShowMessage
@@ -264,6 +271,7 @@ Partial Class Form1
         '
         'pColorFontDialog
         '
+        Me.pColorFontDialog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pColorFontDialog.Controls.Add(Me.txtSampleText)
         Me.pColorFontDialog.Controls.Add(Me.btnSetFont)
         Me.pColorFontDialog.Controls.Add(Me.btnSetColor)
@@ -272,17 +280,17 @@ Partial Class Form1
         Me.pColorFontDialog.Location = New System.Drawing.Point(13, 434)
         Me.pColorFontDialog.Name = "pColorFontDialog"
         Me.pColorFontDialog.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.pColorFontDialog.Size = New System.Drawing.Size(424, 312)
+        Me.pColorFontDialog.Size = New System.Drawing.Size(424, 255)
         Me.pColorFontDialog.TabIndex = 5
         '
         'txtSampleText
         '
         Me.txtSampleText.BackColor = System.Drawing.SystemColors.Control
         Me.txtSampleText.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtSampleText.Location = New System.Drawing.Point(0, 144)
+        Me.txtSampleText.Location = New System.Drawing.Point(3, 144)
         Me.txtSampleText.Multiline = True
         Me.txtSampleText.Name = "txtSampleText"
-        Me.txtSampleText.Size = New System.Drawing.Size(418, 101)
+        Me.txtSampleText.Size = New System.Drawing.Size(415, 101)
         Me.txtSampleText.TabIndex = 5
         Me.txtSampleText.Text = "My Sample Text"
         Me.txtSampleText.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -354,11 +362,61 @@ Partial Class Form1
         Me.ButtonColorToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.ButtonColorToolStripMenuItem.Text = "Button Color"
         '
+        'Panel3
+        '
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.btnFolderOpen)
+        Me.Panel3.Controls.Add(Me.txtFolderOpen)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Location = New System.Drawing.Point(16, 707)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(422, 78)
+        Me.Panel3.TabIndex = 6
+        '
+        'btnFolderOpen
+        '
+        Me.btnFolderOpen.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFolderOpen.Location = New System.Drawing.Point(365, 32)
+        Me.btnFolderOpen.Name = "btnFolderOpen"
+        Me.btnFolderOpen.Size = New System.Drawing.Size(43, 23)
+        Me.btnFolderOpen.TabIndex = 3
+        Me.btnFolderOpen.Text = "..."
+        Me.btnFolderOpen.UseVisualStyleBackColor = True
+        '
+        'txtFolderOpen
+        '
+        Me.txtFolderOpen.Location = New System.Drawing.Point(68, 34)
+        Me.txtFolderOpen.Name = "txtFolderOpen"
+        Me.txtFolderOpen.Size = New System.Drawing.Size(291, 20)
+        Me.txtFolderOpen.TabIndex = 2
+        Me.txtFolderOpen.Text = "C:\"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(13, 34)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(49, 13)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "Directory"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(100, 5)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(226, 24)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Folder Browsing Dialog"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(448, 951)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.pColorFontDialog)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)
@@ -377,6 +435,8 @@ Partial Class Form1
         Me.pColorFontDialog.PerformLayout()
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -416,4 +476,10 @@ Partial Class Form1
     Friend WithEvents PageSetupDialog1 As PageSetupDialog
     Friend WithEvents ButtonColorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents cdButtonColor As ColorDialog
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnFolderOpen As Button
+    Friend WithEvents txtFolderOpen As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents fbdFolderOpen As FolderBrowserDialog
 End Class

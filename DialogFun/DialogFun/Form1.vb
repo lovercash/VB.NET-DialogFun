@@ -70,4 +70,16 @@ Public Class Form1
 
         End If
     End Sub
+
+    ''----------------------------------------------------''
+    '' This container deals with Open Folder Dialog
+    ''----------------------------------------------------''
+
+
+    Private Sub BtnFolderOpen_Click(sender As Object, e As EventArgs) Handles btnFolderOpen.Click
+        fbdFolderOpen.SelectedPath = txtFolderOpen.Text
+        If fbdFolderOpen.ShowDialog() = DialogResult.OK Then
+            txtFolderOpen.Text = fbdFolderOpen.SelectedPath
+        End If
+    End Sub
 End Class
