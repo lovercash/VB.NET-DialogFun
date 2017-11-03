@@ -50,13 +50,8 @@ Public Class Form1
     End Sub
 
     Private Sub BtnSetFont_Click(sender As Object, e As EventArgs) Handles btnSetFont.Click
-
-
-        If cdSetFont.ShowDialog() = DialogResult.OK Then
-            txtSampleText.Font = cdSetFont.Font
-            Me.AutoSize = True
-
-
+        If fdSetFont.ShowDialog() = DialogResult.OK Then
+            txtSampleText.Font = fdSetFont.Font
         End If
     End Sub
 End Class

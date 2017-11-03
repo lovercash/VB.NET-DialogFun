@@ -48,7 +48,7 @@ Partial Class Form1
         Me.btnSetColor = New System.Windows.Forms.Button()
         Me.btnSetFont = New System.Windows.Forms.Button()
         Me.cdSetColor = New System.Windows.Forms.ColorDialog()
-        Me.cdSetFont = New System.Windows.Forms.FontDialog()
+        Me.fdSetFont = New System.Windows.Forms.FontDialog()
         Me.txtSampleText = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -360,6 +360,6 @@ Partial Class Form1
     Friend WithEvents btnSetColor As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents cdSetColor As ColorDialog
-    Friend WithEvents cdSetFont As FontDialog
+    Friend WithEvents fdSetFont As FontDialog
     Friend WithEvents txtSampleText As TextBox
 End Class
